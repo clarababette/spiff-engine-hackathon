@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 550px;
+        }
+    </style>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+    
+    <script>
+        am4core.ready(function () {
+
+            
+            am4core.useTheme(am4themes_animated);
+            
+
+            let chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+
+            let mealType = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+            
+                mealType.data = [{
+                    name: 'Breakfast',
+                    children: [{
+                        name: 'Didnt eat any', value: 1
+                    }, {
+                        name: 'Ate some',
+                        children: [{
+                            name: 'Ate most', value: 1
+                        }, {
+                            name: 'Ate it all', value: 1
+                        }, {
+                            name: 'Ate it and wanted more', value: 1
+                        }]
+                    }]
+                }, {
+                    name: 'Lunch',
+                    children: [{
+                        name: 'Didnt eat any', value: 1
+                    }, {
+                        name: 'Ate some',
+                        children: [{
+                            name: 'Ate most', value: 1
+                        }, {
+                            name: 'Ate it all', value: 1
+                        }, {
+                            name: 'Ate it and wanted more', value: 1
+                        }]
+                    }]
+                }, {
+                    name: 'Snack',
+                    children: [{
+                        name: 'Didnt eat any', value: 1
+                    }, {
+                        name: 'Ate some',
+                        children: [{
+                            name: 'Ate most', value: 1
+                        }, {
+                            name: 'Ate it all', value: 1
+                        }, {
+                            name: 'Ate it and wanted more', value: 1
+                        }]
+                    }]
+
+                }, {
+                    name: 'Supper',
+                    children: [{
+                        name: 'Didnt eat any', value: 1
+                    }, {
+                        name: 'Ate some',
+                        children: [{
+                            name: 'Ate most', value: 1
+                        }, {
+                            name: 'Ate it all', value: 1
+                        }, {
+                            name: 'Ate it and wanted more', value: 1
+                        }]
+                    }]
+                }]
+        },
+
+       
+        mealType.dataFields.name = ("name"))
+        mealType.dataFields.id = ("name");
+        mealType.dataFields.value = ("value");
+        mealType.dataFields.children = ("children");
+       
+       
+       
+        // end am4core.ready()
+    </script>
+
+    <!-- HTML -->
+    <div id="chartdiv"></div>
+</body>
+
+</html>
