@@ -4,7 +4,7 @@ const displayAddedMealElem = document.querySelector(".displayAddedMeal");
 
 // buttonElement.addEventListener('click',function()
 
-//instance for factory
+//instance for factory function
 var tracker = feedsTracker();
 const storageList = [];
 if(localStorage['feedsList']) {

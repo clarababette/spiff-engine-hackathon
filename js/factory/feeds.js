@@ -6,7 +6,7 @@ function feedsTracker(){
     }
 
     function getMeal(){
-        return meal
+        return meal;
     }
 
     // function addMealErrors(meal){
@@ -20,7 +20,6 @@ function feedsTracker(){
     return{
         setMeal,
         getMeal,
-        // addMealErrors
     }
     
 }
