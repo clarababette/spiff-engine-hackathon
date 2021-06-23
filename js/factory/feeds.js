@@ -1,16 +1,16 @@
 function feedsTracker(){
     const meal = [];
 
-    function addMeal(foodType){
+    function set(foodType){
         meal.push(foodType);    
     }
 
     function getMeal(){
-
+        return meal
     }
 
     return{
-        addMeal,
+        set,
         getMeal 
     }
     
