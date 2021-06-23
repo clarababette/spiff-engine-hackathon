@@ -1,5 +1,5 @@
 const meals = {
-  breskfast: ['cereal', 'porridge', 'milk'],
+  breakfast: ['cereal', 'porridge', 'milk'],
   lunch: ['Purity', 'mashed potatoes', 'butternut soup'],
   snack: ['teething biscuits', 'boiled water', 'veggie straws', 'mango and carrot bear paws'],
   dinner: ['mashed sweet potatoes', 'pureed apple and squash', 'butternut'],
@@ -66,3 +66,4 @@ const newFeed = {
 //         time: '7:30pm',
 //     },
 // }
+
