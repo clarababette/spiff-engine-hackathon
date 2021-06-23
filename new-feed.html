@@ -1,70 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
+      <form action="action">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
 
-        <form action="action">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" />
 
-            <label for="Date">Date</label>
-            <input type="date" id="Date" name="date">
+        <div class="textbox">Fed by <input class="fed-by" type="text" /></div>
+        <div class="meals">
+          <label for="meal">Meal</label>
+          <select id="meal" name="meal">
+            <option value="meal">Type of Meal</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="supper">Supper</option>
+            <option value="snack">Snack</option>
+          </select>
+        </div>
+        <button>Done</button>
+        <div class="containing">
+          <h2>containing</h2>
+          <input type="checkbox" id="carrots" name="carrots" value="veg" />
+          <label for="carrots"> Carrots</label><br />
+          <input type="checkbox" id="peas" name="peas" value="veg" />
+          <label for="peas"> Peas</label><br />
+          <input type="checkbox" id="eggs" name="eggs" value="eggs" />
+          <label for="eggs"> Eggs</label><br />
+          <input type="checkbox" id="milk" name="milk" value="milk" />
+          <label for="milk"> Milk</label><br />
 
-            <label for="Time">Time</label>
-            <input type="time" id="Time" name="Time">
-
-            <div class="textbox">
-
-                Fed by <input class="Fed-by" type="text">
-            </div>
-            <div class="meals">
-                <label for="meal">Meal</label>
-                <select id="Meal" name="Meal">
-                    <option value="Meal">Type of Meal</option>
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="lunch">Lunch</option>
-                    <option value="supper">Supper</option>
-                    <option value="snack">Snack</option>
-                </select>
-
-            </div>
-            <button>Done</button>
-            <div class="containing">
-                <h2>containing</h2>
-                <input type="checkbox" id="Carrots" name="Carrots" value="veg">
-                <label for="Carrots"> Carrots</label><br>
-                <input type="checkbox" id="peas" name="peas" value="veg">
-                <label for="peas"> Peas</label><br>
-                <input type="checkbox" id="eggs" name="eggs" value="eggs">
-                <label for="eggs"> Eggs</label><br>
-                <input type="checkbox" id="milk" name="milk" value="milk">
-                <label for="milk"> Milk</label><br>
-
-                <label for="carrots">Carrots</label>
-                <select id="Meal" name="meal">
-                    <option value="ate">Didn't eat much</option>
-                    <option value="ate">Ate some</option>
-                    <option value="ate">Ate most</option>
-                    <option value="ate">Ate it all</option>
-                    <option value="ate">Ate it and wanted more</option>
-                    <option value="ate">Ate most</option>
-
-                </select>
-
-                <button>Submit</button>
-
-
-            </div>
-
-        </form>
+          <label for="carrots">Carrots</label>
+          <select id="meal" name="meal">
+            <option value="didn't eat any">Didn't eat any</option>
+            <option value="ate some">Ate some</option>
+            <option value="ate most">Ate most</option>
+            <option value="ate it all">Ate it all</option>
+            <option value="ate it all and wanted more">Ate it all and wanted more</option>
+          </select>
+          <button>Submit</button>
+        </div>
+      </form>
     </div>
-
-</body>
-
+  </body>
 </html>
