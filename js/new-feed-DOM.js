@@ -1,4 +1,26 @@
 
+
+//instance for factory function
+var tracker = feedsTracker();
+const storageList = [];
+if(localStorage['feedsList']) {
+	storageList = JSON.parse(localStorage.getItem('feedsList'));
+}
+
+function addMeal(){
+	var eachFeed = document.createElement('Li');
+	var eachMeal = checkedMeal.value
+
+    eachFeed.innerHTML = tracker.setMeal(eachMeal);
+
+
+    displayAddedMealElem.appendChild(eachFeed);
+	successfullyElem.innerHTML = 'seccessfully added a meal'
+
+    let key = feedsTracker.getMeal();
+	localStorage.setItem('feedsList', JSON.stringify(key));
+
+
 const addButtonElement = document.querySelector(".btn");
 const submitButtonElement = document.querySelector(".subBtn")
 const mealElement = document.querySelector(".meal")
