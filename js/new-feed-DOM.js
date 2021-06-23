@@ -1,44 +1,58 @@
-
-
-//instance for factory function
-var tracker = feedsTracker();
-const storageList = [];
-if(localStorage['feedsList']) {
-	storageList = JSON.parse(localStorage.getItem('feedsList'));
+let feedList = {};
+if (localStorage['feedsList']) {
+  feedList = JSON.parse(localStorage.getItem('feedListStorage'));
 }
 
-function addMeal(){
-	var eachFeed = document.createElement('Li');
-	var eachMeal = checkedMeal.value
+const mealOption = document.querySelector('#meal');
+const foodOptions = document.querySelector('.containing');
+const addFoodBtn = document.querySelector('.add-food-btn');
+const submitBtn = document.querySelector('.submit-btn');
+const date = document.querySelector('#date');
+const time = document.querySelector('#time');
+const fedBy = document.querySelector('.fed-by');
 
-    eachFeed.innerHTML = tracker.setMeal(eachMeal);
+mealOption.onchange = () => {
+  let meal = mealOption.value;
+  let foods = meals[meal];
+  foodOptions.innerHTML = '';
+  foods.forEach((food) => {
+    let check = foodCheckBox(food);
+    foodOptions.appendChild(check);
+  });
+  addFoodBtn.style.display = 'inherit';
+};
 
+addFoodBtn.addEventListener('click', () => {
+  let checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+  let selectedFoods = [];
+  checkedBoxes.forEach((food) => {
+    selectedFoods.push(food.value);
+  });
+  foodOptions.innerHTML = '';
+  selectedFoods.forEach((selected) => {
+    let dropdown = howMuchDropdown(selected);
+    foodOptions.appendChild(dropdown);
+  });
+  addFoodBtn.style.display = 'none';
+  submitBtn.style.display = 'inherit';
+});
 
-    displayAddedMealElem.appendChild(eachFeed);
-	successfullyElem.innerHTML = 'seccessfully added a meal'
+submitBtn.addEventListener('click', () => {
+  let foodHabits = document.querySelectorAll('.containing select');
+  let feedID = date.value + mealOption.value;
 
-    let key = feedsTracker.getMeal();
-	localStorage.setItem('feedsList', JSON.stringify(key));
+  feedList[feedID] = {};
+  feedList[feedID]['time'] = time.value;
+  feedList[feedID]['fed by'] = fedBy.value;
+  feedList[feedID]['contained'] = {};
+  foodHabits.forEach((food) => {
+    let foodname = food.name.replace('habit', '');
+    feedList[feedID]['contained'][foodname] = food.value;
+  });
+  console.log(feedList);
+  localStorage.setItem('feedListStorage', JSON.stringify(feedList));
+});
 
-
-const addButtonElement = document.querySelector(".btn");
-const submitButtonElement = document.querySelector(".subBtn")
-const mealElement = document.querySelector(".meal")
-
-
-mealElement.addEventListener('change',function(){
-    mealElement.querySelector("meal").innerHTML = ""
-})
-
-addButtonElement.addEventListener('click',function(){
-    addButtonElement.querySelector("btn").innerHTML = ""
-
-})
-
-    submitButtonElement.addEventListener('click',function(){
-
-    })
-    
 function foodCheckBox(food) {
   let div = document.createElement('div');
   let checkbox = document.createElement('input');
@@ -56,9 +70,9 @@ function foodCheckBox(food) {
 function howMuchDropdown(food) {
   let div = document.createElement('div');
   let select = document.createElement('select');
-  select.name = food;
+  select.name = food + 'habit';
   let label = document.createElement('label');
-  label.for = food;
+  label.for = food + 'habit';
   label.innerHTML = food;
   let habits = ["didn't eat any", 'ate some', 'ate most', 'ate it all', 'ate it all and wanted more'];
   habits.forEach((habit) => {
@@ -72,4 +86,3 @@ function howMuchDropdown(food) {
   div.appendChild(select);
   return div;
 }
-
