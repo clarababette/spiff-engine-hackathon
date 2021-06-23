@@ -1,10 +1,3 @@
-// const meals{
-//     const breakfast=["cereal","cereal","cereal","cereal","cereal","cereal"];
-//     const lunch=["Purity","mashed potatoes","butternut soup"];
-//     const snack=["teething biscuits", "boiled water"];
-//     const dinner=["mashed sweet potatoes","pureed apple and squash mixed", "butternut"];
-// }
-
 const meals = {
     breskfast: ["cereal","porridge","milk"],
     lunch: ["Purity","mashedPotatoes","butternutSoup"],
@@ -17,14 +10,12 @@ const digestion = {
         milk: 5,
         porridge:5,
         milk: 3,
-        Purity: 4,
-        mashedPotatoes: 2,
         butternutSoup: 1,
 
 
     },
     constipation:{
-        milk: 5,
+        banana:4,
         porridge:5,
         milk: 3,
         Purity: 4,
@@ -43,19 +34,75 @@ const digestion = {
 }
 
 const habits = {
-    
+    finished:{
+        milk: 5,
+        porridge:5,
+        milk: 3,
+        Purity: 4,
+        mashedPotatoes: 2,
+        butternutSoup: 1,
+    },
+    notFinished:{
+        milk: 5,
+        porridge:5,
+        milk: 3,
+        Purity: 4,
+        mashedPotatoes: 2,
+        butternutSoup: 1,
+    },
+    notEaten:{
+        milk: 5,
+        porridge:5,
+        milk: 3,
+        Purity: 4,
+        mashedPotatoes: 2,
+        butternutSoup: 1,
+    },
 }
 
 //each feed for new meal
 const feeds = {
-    currentDate-breakfast: {
-        time: '',
+    //BREAKFAST
+    breakfast: {
+    milk: 'ate most',
+    date: 2021-06-25,
+    time: '9am',
+    },
+    breakfast: {
+        cereal: 'ate most',
+        date: 2021-06-25,
+        time: '6am',
+    },
 
+    breakfast: {
+        fruitYoghurt: 'portion',
+        date: 2021-06-25,
+        time: '8pm',
+    },
+
+    lunch: {
+        butternutSoup: 'ate most',
+        date: 2021-06-25,
+        time: '3pm',
+    },
+    supper: {
+        date: 2021-06-25,
+        time: '9pm',
         milk: 'ate most',
-
+    },
+    supper: {
+        mashedPotatoes: 'ate most',
+        date: 2021-06-25,
+        time: '7:30pm',
+    },
+    supper: {
+        butternutSoup: 'ate most',
+        date: 2021-06-25,
+        time: '7:30pm',
     },
 
 }
+
 
 // const listIds = [breakfast,lunch,snack,supper];
 // const date = currentDate;
