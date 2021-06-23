@@ -1,7 +1,22 @@
-const buttonElement = document.querySelector('.btn');
 
-// buttonElement.addEventListener('click',function()
+const addButtonElement = document.querySelector(".btn");
+const submitButtonElement = document.querySelector(".subBtn")
+const mealElement = document.querySelector(".meal")
 
+
+mealElement.addEventListener('change',function(){
+    mealElement.querySelector("meal").innerHTML = ""
+})
+
+addButtonElement.addEventListener('click',function(){
+    addButtonElement.querySelector("btn").innerHTML = ""
+
+})
+
+    submitButtonElement.addEventListener('click',function(){
+
+    })
+    
 function foodCheckBox(food) {
   let div = document.createElement('div');
   let checkbox = document.createElement('input');
@@ -35,3 +50,4 @@ function howMuchDropdown(food) {
   div.appendChild(select);
   return div;
 }
+
