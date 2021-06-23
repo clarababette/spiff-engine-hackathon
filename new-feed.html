@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/new-feed.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>New feed</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="action">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
+
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" />
+
+        <div class="textbox">Fed by <input class="fed-by" type="text" /></div>
+        <div class="meals">
+          <label for="meal">Meal</label>
+          <select id="meal" name="meal">
+            <option value="meal">Type of Meal</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="supper">Supper</option>
+            <option value="snack">Snack</option>
+          </select>
+        </div>
+        <button class="btn">add food</button>
+        <div class="containing">
+          <h2>containing</h2>
+          <input type="checkbox" id="carrots" name="carrots" value="veg" />
+          <label for="carrots"> Carrots</label><br />
+          <input type="checkbox" id="peas" name="peas" value="veg" />
+          <label for="peas"> Peas</label><br />
+          <input type="checkbox" id="eggs" name="eggs" value="eggs" />
+          <label for="eggs"> Eggs</label><br />
+          <input type="checkbox" id="milk" name="milk" value="milk" />
+          <label for="milk"> Milk</label><br />
+
+          <label for="carrots">Carrots</label>
+          <select id="meal" name="meal">
+            <option value="didn't eat any">Didn't eat any</option>
+            <option value="ate some">Ate some</option>
+            <option value="ate most">Ate most</option>
+            <option value="ate it all">Ate it all</option>
+            <option value="ate it all and wanted more">Ate it all and wanted more</option>
+          </select>
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/new-feed-DOM.js"></script>
+  </body>
+</html>
