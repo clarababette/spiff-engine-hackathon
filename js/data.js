@@ -1,8 +1,8 @@
 const meals = {
-  breakfast: ['cereal', 'porridge', 'milk'],
-  lunch: ['Purity', 'mashed potatoes', 'butternut soup'],
-  snack: ['teething biscuits', 'boiled water', 'veggie straws', 'mango and carrot bear paws'],
-  supper: ['mashed sweet potatoes', 'pureed apple and squash', 'butternut'],
+  breakfast: ['cereal', 'porridge', 'milk', 'oatmeal', 'smoothie', 'sheera', 'nutrific', 'banana', 'custard', 'smoothie', 'omelette', 'milkshake'],
+  lunch: ['purity', 'potatoes', 'butternut', 'soup', 'mixed veggies', 'carrots', 'avocado', 'watermelon', 'eggs', 'paranthas', 'pudding', 'custard', 'milkshake', 'pancake', 'mince', 'butternut'],
+  snack: ['biscuits', 'water', 'Watermelon', 'mango', 'prunes', 'paws', 'yogurt', 'pears', 'apple sauce', 'blueberry', 'cucumber'],
+  supper: ['potatoes', 'apple', 'squash', 'butternut', 'wheatgerm', 'parsnip', 'barley', 'spinach', 'rice', 'ragi', 'barley', 'broccoli', 'chicken', 'peas', 'beans', 'noodles', 'spinach', 'rice', 'bhagar', 'hummus', 'turkey', 'beef', 'mince'],
 };
 
 const digestion = {
