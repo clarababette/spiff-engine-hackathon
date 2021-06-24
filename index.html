@@ -14,25 +14,41 @@
   </head>
   <body>
     <h1>What's on Lisa's plate?</h1>
-    <button onclick="document.location='new-feed.html'">Add feed</button>
-    <div class="search">
-      <label>Search</label>
-      <input type="text" />
+    <button class="pagebtn" onclick="document.location='new-feed.html'">Add feed</button>
+    <button class="pagebtn" onclick="document.location='trends.html'">View trends</button>
+    <div class="legend">
+      <h2>Legend</h2>
+      <div>
+        <h3 class="type">Didn't eat any</h3>
+        <div class="how-much ate-none"></div>
+      </div>
+      <div>
+        <h3 class="type">Ate some of it</h3>
+        <div class="how-much ate-some"></div>
+      </div>
+      <div>
+        <h3 class="type">Ate most of it</h3>
+        <div class="how-much ate-most"></div>
+      </div>
+      <div>
+        <h3 class="type">Ate it all</h3>
+        <div class="how-much finished"></div>
+      </div>
+      <div>
+        <h3 class="type">Ate it all and wanted more</h3>
+        <div class="how-much finished-and-more"></div>
+      </div>
     </div>
-    <button onclick="document.location='trends.html'">View trends</button>
-    <div id="feed"></div>
-
+    <div id="feedList"></div>
     <script src="js/data.js"></script>
     <script src="js/dashboard-DOM.js"></script>
     <script type="text/x-template" id="feedTemplate">
       {{#each this}}
-      <div class={{@key}}>
+      <div id={{@key}} class="feed">
         <h2 class="date">{{date @key}}</h2>
         <h2 class="time">{{time}}</h2>
         <h2 class="meal">{{meal @key}}</h2>
         <h2 class="fed-by">{{feeder fedby}}</h2>
-        <button class="details">View details</button>
-        <!-- <button class="add-digestion">Add digestion</button> -->
         <div class="food">
           {{#each contained}}
           <div>
@@ -40,6 +56,8 @@
             <div class={{howMuch this}}></div>
           </div>
           {{/each}}
+        </div>
+      </div>
       {{/each}}
     </script>
   </body>
