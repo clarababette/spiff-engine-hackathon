@@ -2,7 +2,7 @@ body {
   grid-template-columns: repeat(3, auto);
 }
 
-.feed {
+#feed {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-column: span 3;
