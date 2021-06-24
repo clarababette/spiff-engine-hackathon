@@ -1,0 +1,10 @@
+* {
+  margin: 1rem;
+}
+.add-food-btn {
+  display: none;
+}
+
+.submit-btn {
+  display: none;
+}
