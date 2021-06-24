@@ -11,43 +11,43 @@ am4core.ready(function () {
     {
       name: "Didn't eat any",
       children: [
-        { name: 'milk', value: 100 },
-        { name: 'eggs', value: 60 },
-        { name: 'bread', value: 30 },
+        { name: 'milk', value: 10 },
+        { name: 'eggs', value: 23 },
+        { name: 'bread', value: 3 },
       ],
     },
     {
       name: 'Ate some',
       children: [
-        { name: 'B1', value: 135 },
-        { name: 'B2', value: 98 },
-        { name: 'B3', value: 56 },
+        { name: 'cheese', value: 15 },
+        { name: 'carrots', value: 8 },
+        { name: 'potatoes', value: 6 },
       ],
     },
     {
       name: 'Ate most',
       children: [
-        { name: 'C1', value: 335 },
-        { name: 'C2', value: 148 },
-        { name: 'C3', value: 126 },
-        { name: 'C4', value: 26 },
+        { name: 'peas', value: 35 },
+        { name: 'pumpkin', value: 18 },
+        { name: 'rice', value: 12 },
+        { name: 'porridge', value: 26 },
       ],
     },
     {
       name: 'Ate everything',
       children: [
-        { name: 'D1', value: 415 },
-        { name: 'D2', value: 148 },
-        { name: 'D3', value: 89 },
-        { name: 'D4', value: 64 },
-        { name: 'D5', value: 16 },
+        { name: 'lettuce', value: 15 },
+        { name: 'tomatoes', value: 48 },
+        { name: 'corn', value: 8 },
+        { name: 'chicken', value: 4 },
+        { name: 'onions', value: 6 },
       ],
     },
     {
       name: 'Ate everything and wanted more',
       children: [
-        { name: 'E1', value: 687 },
-        { name: 'E2', value: 148 },
+        { name: 'chocolate', value: 7 },
+        { name: 'cereal', value: 14 },
       ],
     },
   ];
@@ -63,10 +63,12 @@ am4core.ready(function () {
   networkSeries.nodes.template.outerCircle.scale = 1;
 
   networkSeries.nodes.template.label.text = '{name}';
-  networkSeries.fontSize = 8;
+  networkSeries.fontSize = 12;
   networkSeries.nodes.template.label.hideOversized = true;
-  networkSeries.nodes.template.label.truncate = true;
+  networkSeries.nodes.template.label.truncate = false;
+  networkSeries.nodes.template.label.wrap = false;
   networkSeries.minRadius = am4core.percent(2);
   networkSeries.manyBodyStrength = -5;
   networkSeries.links.template.strokeOpacity = 0;
+  networkSeries.colors.list = [am4core.color('#a6e1b1'), am4core.color('#566b92'), am4core.color('#fcb698'), am4core.color('#a6e0b1'), am4core.color('#7c7cd0'), am4core.color('#bf566b'), am4core.color('#daeea0'), am4core.color('#fcb597'), am4core.color('#556a91'), am4core.color('#78c777'), am4core.color('#fcb597')];
 });

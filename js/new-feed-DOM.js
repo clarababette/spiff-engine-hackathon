@@ -1,5 +1,5 @@
 let feedList = {};
-if (localStorage['feedsList']) {
+if (localStorage['feedListStorage']) {
   feedList = JSON.parse(localStorage.getItem('feedListStorage'));
 }
 
@@ -43,7 +43,7 @@ submitBtn.addEventListener('click', () => {
 
   feedList[feedID] = {};
   feedList[feedID]['time'] = time.value;
-  feedList[feedID]['fed by'] = fedBy.value;
+  feedList[feedID]['fedby'] = fedBy.value;
   feedList[feedID]['contained'] = {};
   foodHabits.forEach((food) => {
     let foodname = food.name.replace('habit', '');
@@ -51,6 +51,7 @@ submitBtn.addEventListener('click', () => {
   });
   console.log(feedList);
   localStorage.setItem('feedListStorage', JSON.stringify(feedList));
+  window.location.href = 'index.html';
 });
 
 function foodCheckBox(food) {

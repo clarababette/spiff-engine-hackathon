@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,42 +14,33 @@
   </head>
   <body>
     <h1>What's on Lisa's plate?</h1>
-    <button onclick="document.location='new-feed.html'" >Add feed</button>
+    <button onclick="document.location='new-feed.html'">Add feed</button>
     <div class="search">
-        <label>Search</label>
-        <input type="text" />
+      <label>Search</label>
+      <input type="text" />
     </div>
     <button onclick="document.location='trends.html'">View trends</button>
-      <div class=feed 21062021breakfast">
-        <h2 class="date">21/06/2021</h2>
-        <h2 class="time">6:35</h2>
-        <h2 class="meal">Breakfast</h2>
-        <h2 class="fed-by">Fed by: Zinani</h2>
+    <div id="feed"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/dashboard-DOM.js"></script>
+    <script type="text/x-template" id="feedTemplate">
+      {{#each this}}
+      <div class={{@key}}>
+        <h2 class="date">{{date @key}}</h2>
+        <h2 class="time">{{time}}</h2>
+        <h2 class="meal">{{meal @key}}</h2>
+        <h2 class="fed-by">{{feeder fedby}}</h2>
         <button class="details">View details</button>
-        <button class="add-digestion">Add digestion</button>
+        <!-- <button class="add-digestion">Add digestion</button> -->
         <div class="food">
+          {{#each contained}}
           <div>
-            <h3 class="type">Carrots</h3>
-            <div class="how-much ate-most"></div>
+            <h3 class="type">{{@key}}</h3>
+            <div class={{howMuch this}}></div>
           </div>
-          <div>
-            <h3 class="type">Pumpkin</h3>
-            <div class="how-much ate-some"></div>
-          </div>
-          <div>
-            <h3 class="type">Peas</h3>
-            <div class="how-much finished"></div>
-          </div>
-          <div>
-            <h3 class="type">Sweet Potatoes</h3>
-            <div class="how-much finished-and-more"></div>
-          </div>
-          <div>
-            <h3 class="type">Eggs</h3>
-            <div class="how-much ate-none"></div>
-          </div>
-        </div>
-    
-    </div>
+          {{/each}}
+      {{/each}}
+    </script>
   </body>
 </html>
