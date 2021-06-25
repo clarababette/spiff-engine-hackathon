@@ -1,10 +1,27 @@
-* {
-  margin: 1rem;
-}
 .add-food-btn {
   display: none;
 }
 
 .submit-btn {
   display: none;
+}
+
+form {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  row-gap: 2rem;
+  margin-bottom: 2rem;
+}
+.containing {
+  grid-column: span 4;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  row-gap: 1rem;
+}
+
+label {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
