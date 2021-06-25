@@ -1,6 +1,8 @@
 let feedList = {};
 if (localStorage['feedListStorage']) {
   feedList = JSON.parse(localStorage.getItem('feedListStorage'));
+} else {
+  feedList = startData;
 }
 
 const mealOption = document.querySelector('#meal');
@@ -20,6 +22,7 @@ mealOption.onchange = () => {
     foodOptions.appendChild(check);
   });
   addFoodBtn.style.display = 'inherit';
+  submitBtn.style.display = 'none';
 };
 
 addFoodBtn.addEventListener('click', () => {

@@ -1,6 +1,8 @@
 let feedList = {};
 if (localStorage['feedListStorage']) {
   feedList = JSON.parse(localStorage.getItem('feedListStorage'));
+} else {
+  feedList = startData;
 }
 
 Handlebars.registerHelper('date', (mealID) => {
