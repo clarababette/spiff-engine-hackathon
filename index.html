@@ -44,19 +44,21 @@
     <script src="js/dashboard-DOM.js"></script>
     <script type="text/x-template" id="feedTemplate">
       {{#each this}}
-      <div id={{@key}} class="feed">
-        <h2 class="date">{{date @key}}</h2>
-        <h2 class="time">{{time}}</h2>
-        <h2 class="meal">{{meal @key}}</h2>
-        <h2 class="fed-by">{{feeder fedby}}</h2>
+      <div id={{this}} class="feed">
+        <h2 class="date">{{date this}}</h2>
+        <h2 class="time">{{time this}}</h2>
+        <h2 class="meal">{{meal this}}</h2>
+        <h2 class="fed-by">{{feeder this}}</h2>
         <div class="food">
-          {{#each contained}}
-          <div>
-            <h3 class="type">{{@key}}</h3>
-            <div class={{howMuch this}}></div>
-          </div>
-          {{/each}}
         </div>
+      </div>
+      {{/each}}
+    </script>
+    <script type="text/x-template" id="contentsTemplate">
+      {{#each this}}
+      <div>
+        <h3 class="type">{{@key}}</h3>
+        <div class={{howMuch this}}></div>
       </div>
       {{/each}}
     </script>

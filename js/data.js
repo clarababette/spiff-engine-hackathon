@@ -26,19 +26,132 @@ const newFeed = {
 };
 
 const startData = {
-  '2021-06-24breakfast': { time: '05:00', fedby: 'Zoe', contained: { milk: 'ate some', oatmeal: 'ate some' } },
-  '2021-06-11lunch': { time: '11:58', fedby: 'Lolo', contained: { potatoes: 'ate some', soup: 'ate some', watermelon: 'ate it all and wanted more' } },
-  '2021-06-19supper': { time: '17:59', fedby: 'Ongie', contained: { potatoes: 'ate some', wheatgerm: "didn't eat any", spinach: "didn't eat any", mince: 'ate it all' } },
-  '2021-06-24lunch': { time: '18:00', fedby: 'Yolie', contained: { purity: 'ate it all and wanted more', watermelon: 'ate it all and wanted more', eggs: 'ate it all' } },
-  '2021-06-25supper': { time: '19:03', fedby: 'Amanda', contained: { noodles: 'ate most', spinach: 'ate some', beef: 'ate it all' } },
-  '2021-06-25breakfast': { time: '09:03', fedby: 'Amanda', contained: { milk: 'ate most', nutrific: 'ate some', milkshake: 'ate most' } },
-  '2021-06-25lunch': { time: '13:08', fedby: 'Nzwakie', contained: { butternut: 'ate most', 'mixed veggies': 'ate some', mince: 'ate it all and wanted more' } },
-  '2021-06-10supper': { time: '18:06', fedby: 'Ongie', contained: { potatoes: 'ate most', apple: 'ate most', mince: 'ate it all' } },
-  '2021-06-17breakfast': { time: '07:07', fedby: 'Kim', contained: { cereal: 'ate it all', milk: 'ate it all' } },
-  '2021-06-19breakfast': { time: '06:10', fedby: 'Lina', contained: { milk: 'ate it all and wanted more', oatmeal: 'ate it all', omelette: 'ate it all', milkshake: 'ate it all and wanted more' } },
-  '2021-06-26supper': { time: '19:08', fedby: 'Nzwakie', contained: { rice: 'ate most', chicken: 'ate most', peas: 'ate some', spinach: 'ate some' } },
-  '2021-06-25snack': { time: '17:15', fedby: 'Abo', contained: { biscuits: 'ate most', water: 'ate it all and wanted more' } },
-  '2021-06-23supper': { time: '20:18', fedby: 'Avu', contained: { potatoes: 'ate it all', butternut: 'ate most', rice: 'ate most' } },
+  '2021-06-24breakfast': {
+    time: '05:00',
+    fedby: 'Zinani',
+    contained: {
+      milk: 'ate some',
+      oatmeal: 'ate some',
+    },
+  },
+  '2021-06-11lunch': {
+    time: '11:58',
+    fedby: 'Maria',
+    contained: {
+      potatoes: 'ate some',
+      soup: 'ate some',
+      watermelon: 'ate it all and wanted more',
+    },
+  },
+  '2021-06-19supper': {
+    time: '17:59',
+    fedby: 'Zinani',
+    contained: {
+      potatoes: 'ate some',
+      wheatgerm: "didn't eat any",
+      spinach: "didn't eat any",
+      mince: 'ate it all',
+    },
+  },
+  '2021-06-24lunch': {
+    time: '18:00',
+    fedby: 'Maria',
+    contained: {
+      purity: 'ate it all and wanted more',
+      watermelon: 'ate it all and wanted more',
+      eggs: 'ate it all',
+    },
+  },
+  '2021-06-24supper': {
+    time: '19:03',
+    fedby: 'Zinani',
+    contained: {
+      noodles: 'ate most',
+      spinach: 'ate some',
+      beef: 'ate it all',
+    },
+  },
+  '2021-06-23breakfast': {
+    time: '09:03',
+    fedby: 'Zinani',
+    contained: {
+      milk: 'ate most',
+      nutrific: 'ate some',
+      milkshake: 'ate most',
+    },
+  },
+  '2021-06-23lunch': {
+    time: '13:08',
+    fedby: 'Maria',
+    contained: {
+      butternut: 'ate most',
+      'mixed veggies': 'ate some',
+      mince: 'ate it all and wanted more',
+    },
+  },
+  '2021-06-22supper': {
+    time: '18:06',
+    fedby: 'Zinani',
+    contained: {
+      potatoes: 'ate most',
+      apple: 'ate most',
+      mince: 'ate it all',
+    },
+  },
+  '2021-06-22breakfast': {
+    time: '07:07',
+    fedby: 'Zinani',
+    contained: {
+      cereal: 'ate it all',
+      milk: 'ate it all',
+    },
+  },
+  '2021-06-21breakfast': {
+    time: '06:10',
+    fedby: 'Zinani',
+    contained: {
+      milk: 'ate it all and wanted more',
+      oatmeal: 'ate it all',
+      omelette: 'ate it all',
+      milkshake: 'ate it all and wanted more',
+    },
+  },
+  '2021-06-20supper': {
+    time: '19:08',
+    fedby: 'Zinani',
+    contained: {
+      rice: 'ate most',
+      chicken: 'ate most',
+      peas: 'ate some',
+      spinach: 'ate some',
+    },
+  },
+  '2021-06-24snack': {
+    time: '17:15',
+    fedby: 'Maria',
+    contained: {
+      biscuits: 'ate most',
+      water: 'ate it all and wanted more',
+    },
+  },
+  '2021-06-23supper': {
+    time: '20:18',
+    fedby: 'AZinanivu',
+    contained: {
+      potatoes: 'ate it all',
+      butternut: 'ate most',
+      rice: 'ate most',
+    },
+  },
+  '2021-06-25breakfast': {
+    time: '06:23',
+    fedby: 'Zinani',
+    contained: {
+      cereal: 'ate it all',
+      milk: 'ate most',
+      banana: 'ate it all and wanted more',
+    },
+  },
 };
 
 // //each feed for new meal

@@ -85,6 +85,6 @@ let habitTrends = am4core.ready(function () {
   networkSeries.minRadius = am4core.percent(0);
   networkSeries.manyBodyStrength = -5;
   networkSeries.links.template.strokeOpacity = 0;
-  networkSeries.colors.list = [am4core.color('#a6e1b1'), am4core.color('#566b92'), am4core.color('#fcb698'), am4core.color('#a6e0b1'), am4core.color('#7c7cd0'), am4core.color('#bf566b'), am4core.color('#daeea0'), am4core.color('#fcb597'), am4core.color('#556a91'), am4core.color('#78c777'), am4core.color('#fcb597')];
+  networkSeries.colors.list = [am4core.color('#F266B3'), am4core.color('#5483BF'), am4core.color('#3FA64E')];
   chart.legend = new am4charts.Legend();
 });
